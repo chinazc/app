@@ -1,0 +1,40 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>Google Map</title>
+        <script type="text/javascript" src="mapfiles/mapapi.js"></script>
+    <script>
+      function initialize() {
+        var contentString = '#CAPTION#';
+        var myLatlng = new google.maps.LatLng(#LAT#,#LONG#);
+        var mapOptions = {
+          zoom: #ZOOM#,
+          center: myLatlng,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+
+        var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
+        var infowindow = new google.maps.InfoWindow({
+            content: contentString
+        });
+        
+        var marker = new google.maps.Marker({
+            position: myLatlng,
+            map: map,
+            title: 'android'
+        });
+        
+        google.maps.event.addListener(marker, 'click', function() {
+          infowindow.open(map,marker);
+        });
+
+      }
+    </script>
+    </head>
+    
+    <body onload="initialize()">
+        <div id="map_canvas" style="left:0;top:0;width:100%;height:100%;position:absolute;"></div>
+    </body>
+
+</html>

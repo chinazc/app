@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    
+    android:gravity="center_vertical"
+    >
+   
+        
+    <LinearLayout 
+        android:id="@+id/lin1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="#ee4F5560"
+        android:orientation="vertical"
+        android:layout_alignParentBottom="true"
+        >
+        <TextView 
+        android:id="@+id/tv_title"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:textColor="#ffffff"
+        android:text="更改背景"/>
+    <Button 
+        android:id="@+id/take_photo"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:onClick="TakePhoto"
+        android:textStyle="bold"
+        android:text="拍  照"/>
+    <Button 
+        android:id="@+id/select_photo"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="5dp"
+        android:onClick="SelectPhoto"
+        android:textStyle="bold"
+        android:text="选择照片"/>
+    <Button 
+        android:id="@+id/cancle"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:gravity="center"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginBottom="20dp"
+        android:textStyle="bold"
+        android:onClick="CanclePhotoView"
+        android:text="取  消"/>
+    </LinearLayout>
+
+     <LinearLayout 
+        android:id="@+id/lin2"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        
+        android:layout_above="@id/lin1">
+    
+    <ImageView 
+        android:id="@+id/image"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"/>
+        
+       </LinearLayout>
+
+
+</RelativeLayout>

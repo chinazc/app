@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">TimeSheetassistant</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="net_error">网络错误</string>
+    <string name="key_error">秘钥错误</string>
+    <string name="systemtip">系统提示</string>
+    <string name="issuretoexit">确定要退出吗？</string>
+    <string name="Confirm">确定</string>
+    <string name="Cancel">取消</string>
+    
+    
+    
+     
+	<string name="version_info_title">版本信息：</string>
+	
+    <item name="debug_open" type="bool" format="boolean">true</item>
+    <item name="db_save_sdcard" type="bool" format="boolean">false</item>
+
+    <item name="data_can_save_sdcard" type="bool" format="boolean">true</item>
+
+    <string name="media_download_ip_default">http://vm.zwmobile.com:8080/</string>
+    <string name="ws_targetNamespace">http://service.ws.zeroglobal.com</string>
+    <string name="ws_upload_request_method">Ws_UploadBegin</string>
+    <string name="ws_upload_method">Ws_Upload</string>
+    <string name="ws_incrementsync_method">Ws_Download</string>
+    <string name="ws_initsync_method">Ws_Init</string>
+    <string name="ws_check_method">Ws_Check</string>
+
+    <string name="ws_method_uploadFile">Ws_UploadFile</string>
+    <string name="ws_method_downloadFile">Ws_DownloadFile</string>
+    <string name="ws_method_downloadFileReseed">Ws_DownloadFileReseed</string>
+     <string name="ws_createrdatabase_init">Ws_CreateDatabaseInit</string>
+    <string name="ws_createrdatabase_increment">Ws_CreateDatabaseIncrement </string>
+    
+</resources>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/linearLayout01"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#ffffff" >
+            
+        <LinearLayout
+            android:id="@+id/info_linear"
+            android:layout_width="wrap_content"
+            android:layout_height="65dp"
+            android:orientation="vertical"
+            android:layout_alignParentTop="true"
+            android:layout_weight="8"
+            android:background="#ffffff">
+
+            <TextView
+                android:id="@+id/project_name"
+                android:layout_width="150dp"
+                android:layout_height="20dp"
+                android:layout_marginLeft="20dp"
+                android:text="项目名称"
+                android:ellipsize="end"
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/role"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginLeft="25dp"
+                android:gravity="center"
+                android:text="角色" />
+            <TextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:layout_marginLeft="25dp"
+                android:gravity="center"
+                android:text="时间" />
+
+            </LinearLayout>
+            
+            <TextView
+                android:id="@+id/buzhu"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_toRightOf="@id/info_linear"
+                android:layout_marginLeft="40dp"
+                android:gravity="center"
+                android:text="补助"
+                android:textSize="16dp" />
+            <TextView
+                android:id="@+id/jintie"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_below="@id/buzhu"
+                android:layout_toRightOf="@id/info_linear"
+                android:layout_marginLeft="40dp"
+                android:gravity="center"
+                android:text="津贴"
+                android:textSize="16dp"/>
+            <CheckBox 
+                android:id="@+id/buzhubtn"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_marginTop="2dp"
+                android:layout_toRightOf="@id/buzhu"
+                android:layout_marginLeft="15dp"/>
+            <CheckBox 
+                android:id="@+id/jintiebtn"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp"
+                android:layout_below="@id/buzhubtn"
+                android:layout_toRightOf="@id/jintie"
+                android:layout_marginLeft="15dp"/>
+        <LinearLayout
+            android:id="@+id/confirm_linear"
+            android:layout_width="fill_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="6dp"
+            android:layout_marginLeft="6dp"
+            android:layout_marginRight="6dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="8"
+            android:gravity="center" >
+
+            <Button
+                android:id="@+id/confirm"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="提交" />
+        </LinearLayout>
+
+        <WebView
+            android:id="@+id/webView1"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_above="@id/confirm_linear"
+            android:layout_below="@id/info_linear"
+            android:layout_weight="3" />
+    </RelativeLayout>
+    
+
+</LinearLayout>

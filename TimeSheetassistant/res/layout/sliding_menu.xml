@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linear"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <LinearLayout
+        android:id="@+id/ll_sliding"
+        android:orientation="horizontal" 
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#000000" >
+  
+        <ScrollView
+            android:id="@+id/scrollview"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:scrollbars="none" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="#000000"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="110dp"
+                    android:background="#000000" >
+
+                    <ImageView
+                        android:id="@+id/slid_head"
+                        android:layout_width="70dp"
+                        android:layout_height="70dp"                        
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/imagebottom" />
+                    <TextView
+                            android:id="@+id/name"
+                            android:layout_width="250dp"
+                            android:layout_height="25dp"
+                            android:layout_marginTop="10dp"
+                            android:paddingLeft="5dp"
+                            android:layout_toRightOf="@id/slid_head"
+                           	android:text="姓名："
+                           	android:textColor="#ffffff"/>
+                    
+                 	<TextView
+                 	    android:id="@+id/position"
+                 	    android:layout_width="115dp"
+                 	    android:layout_height="25dp"
+                 	    android:layout_below="@id/name"
+                 	    android:layout_toRightOf="@id/slid_head"
+                 	    android:paddingLeft="5dp"
+                 	    android:text="职位："
+                 	    android:textColor="#ffffff" />
+                 	
+                  	<ImageView
+                        android:id="@+id/setting"
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"                      
+                        android:layout_toRightOf="@id/position"
+                        android:layout_marginTop="15dp"
+                        
+                        android:background="@drawable/setting"
+                        android:onClick="GoSetting" />
+
+                     <TextView
+                         android:id="@+id/sign"
+                         android:layout_width="160dp"
+                         android:layout_height="25dp"
+                         android:layout_alignParentBottom="true"
+                         android:layout_below="@id/position"
+                         android:layout_toRightOf="@id/slid_head"
+                         android:paddingLeft="5dp"
+                         android:text="相关信息："
+                         android:textColor="#ffffff" />
+                 
+                </RelativeLayout>
+                
+                  <LinearLayout
+                    android:id="@+id/touchaction"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_marginLeft="10dp"
+                    android:paddingRight="120dp"
+                    android:orientation="vertical" >
+                   <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#ffffff" />
+                  <TextView
+                        android:id="@+id/timesheet"
+                        android:layout_width="fill_parent"
+                        android:layout_height="44dp" 
+                        android:paddingLeft="10dp"
+                        android:text="TimeSheet"
+                        android:textColor="#ffffff"
+                        android:gravity="center_vertical"
+                        android:background="#000000"
+                        android:onClick="GoHome"/> 
+                  <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#ffffff" />
+                        
+                  <TextView
+                        android:id="@+id/shake"
+                        android:layout_width="fill_parent"
+                        android:layout_height="44dp" 
+                        android:paddingLeft="10dp"
+                        android:text="摇一摇"
+                        android:textColor="#ffffff"
+                        android:gravity="center_vertical"
+                        android:background="#000000"
+                        android:onClick="GoShake"/> 
+                  <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#ffffff" />  
+                    
+                  <TextView
+                        android:id="@+id/version_info"
+                        android:layout_width="fill_parent"
+                        android:layout_height="44dp" 
+                        android:paddingLeft="10dp"
+                        android:text="版权信息"
+                        android:textColor="#ffffff"
+                        android:gravity="center_vertical"
+                        android:background="#000000"/> 
+                  <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#ffffff" />
+                  
+                  <TextView
+                        android:id="@+id/help"
+                        android:layout_width="fill_parent"
+                        android:layout_height="44dp"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="使用帮助" 
+                        android:textColor="#ffffff"
+                        android:background="#000000"/>   
+                  <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#ffffff" /> 
+                    
+                  <TextView
+                     	 android:id="@+id/suggestion"
+                        android:layout_width="fill_parent"
+                        android:layout_height="44dp"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="意见反馈"
+                        android:textColor="#ffffff"
+                        android:background="#000000" />   
+                  <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#ffffff" /> 
+                   <TextView
+                     	 android:id="@+id/about_me"
+                        android:layout_width="fill_parent"
+                        android:layout_height="44dp"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="关于我们"
+                        android:textColor="#ffffff"
+                        android:background="#000000" />   
+                  <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#ffffff" />
+                  <TextView
+                     	 android:id="@+id/update"
+                        android:layout_width="fill_parent"
+                        android:layout_height="44dp"
+                        android:gravity="center_vertical"
+                        android:paddingLeft="10dp"
+                        android:text="检查更新"
+                        android:textColor="#ffffff"
+                        android:background="#000000" />   
+                        
+                <View
+                    android:layout_width="fill_parent"
+                    android:layout_height="1dp"
+                    android:background="#ffffff" />
+                 </LinearLayout> 
+ 
+                
+                
+                <LinearLayout
+                    android:id="@+id/company"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#000000"
+                    android:orientation="vertical" >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="70dp"
+                        android:background="@drawable/img1" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="55dp"
+                        android:textColor="#ffffff"
+                        android:text="TimeSheetAssistant" />
+
+                    <TextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="30dp"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginLeft="70dp"
+                        android:textColor="#ffffff"
+                        android:text="上海汉得信息" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+</LinearLayout>

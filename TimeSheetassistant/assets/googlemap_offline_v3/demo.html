@@ -1,0 +1,82 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>Offline Maps Demo - RoverTang.com</title>
+        <script type="text/javascript" src="mapfiles/mapapi.js"></script>
+    <script>
+      function initialize() {
+        var myLatlng = new google.maps.LatLng(31.23070,121.47471);
+        var mapOptions = {
+          zoom: 10,
+          center: myLatlng,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+
+        var map = new google.maps.Map(document.getElementById('map_canvas'), mapOptions);
+
+        var contentString = '这里是上海！';
+
+        var infowindow = new google.maps.InfoWindow({
+            content: contentString
+        });
+
+        var marker = new google.maps.Marker({
+            position: myLatlng,
+            map: map,
+            title: '上海'
+        });
+        google.maps.event.addListener(marker, 'click', function() {
+          infowindow.open(map,marker);
+        });
+      
+      
+      
+      
+      
+      var parliament = new google.maps.LatLng(31,121);
+      var marker2 = new google.maps.Marker({
+          map:map,
+          draggable:true,
+          animation: google.maps.Animation.DROP,
+          position: parliament
+        });
+        google.maps.event.addListener(marker2, 'click', toggleBounce);
+
+      function toggleBounce() {
+
+        if (marker2.getAnimation() != null) {
+          marker2.setAnimation(null);
+        } else {
+          marker2.setAnimation(google.maps.Animation.BOUNCE);
+        }
+      }
+
+
+
+        var flightPlanCoordinates = [
+            new google.maps.LatLng(31, 121),
+            new google.maps.LatLng(31.1, 121.2),
+            new google.maps.LatLng(31.5, 121.4),
+            new google.maps.LatLng(31.5, 121.9)
+        ];
+        var flightPath = new google.maps.Polyline({
+          path: flightPlanCoordinates,
+          strokeColor: '#FF0000',
+          strokeOpacity: 1.0,
+          strokeWeight: 2
+        });
+
+        flightPath.setMap(map);
+
+
+      }
+    </script>
+    </head>
+    
+    <body onload="initialize()">
+        <div id="map_canvas" style="left:0;top:0;width:100%;height:100%;position:absolute;"></div>
+    </body>
+
+</html>
